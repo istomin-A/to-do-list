@@ -316,10 +316,12 @@ body {
 }
 
 .actions__button {
+    position: relative;
+    z-index: 10;
+}
 
-    img {
-        pointer-events: none;
-    }
+.actions__button img {
+    pointer-events: none;
 }
 
 /* out tasks */
