@@ -1,0 +1,347 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600&display=swap");
+
+/* reset styles */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scrollbar-gutter: stable;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* ======================================================== */
+/* body */
+body {
+    background: linear-gradient(45deg, #E9967A, #F4A460);
+    font-family: Montserrat;
+    color: #111111;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* ======================================================== */
+/* wrapper */
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+/* ======================================================== */
+/* container */
+._container {
+    max-width: calc(62.5rem + (0.9375rem * 2));
+    margin: 0 auto;
+    padding: 0px 1rem;
+}
+
+/* ======================================================== */
+/* *blocks */
+/* inner */
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 1.125rem rgba(0, 0, 0, .3);
+    padding: 1.25rem;
+}
+
+/* section-title */
+.section-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: inherit;
+    line-height: 125%;
+    margin-bottom: 1.25rem;
+}
+
+/* out */
+.out {
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* ======================================================== */
+/* h1 */
+.main__title {
+    font-weight: 600;
+    font-size: 2.125rem;
+    line-height: 125%;
+    color: inherit;
+    text-transform: uppercase;
+    background-color: #fefefe;
+    border-radius: 1.25rem;
+    text-align: center;
+    padding: 1.25rem;
+    box-shadow: 0 1rem 1.125rem rgba(0, 0, 0, .2);
+    margin-bottom: 1.875rem;
+}
+
+/* ======================================================== */
+/* popup */
+.popup {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    background-color: #fefefe;
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 1.125rem rgba(0, 0, 0, .3);
+    padding: 1.25rem;
+    position: fixed;
+    top: 10%;
+    right: -100%;
+    transition: right 0.3s ease 0s;
+}
+
+.popup._active {
+    right: 2%;
+}
+
+/* error */
+.error {
+    display: none;
+    padding: 0 1.25rem;
+    color: rgb(197, 0, 0);
+    font-weight: 600;
+}
+
+.error._active {
+    display: block;
+}
+
+/* no tasks */
+.no-tasks {
+    text-align: center;
+    font-size: 1.25rem;
+    color: inherit;
+    font-weight: 500;
+    padding: 1.25rem 0;
+}
+
+/* none */
+._none {
+    display: none;
+}
+
+/* ======================================================== */
+/* *main part */
+/* add tasks */
+.main__main-part {
+    padding: 2.5rem 0 1.25rem 0;
+}
+
+.to-do__body {
+    max-width: 37.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.to-do__title-task {
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+    padding: 1rem 1.25rem;
+    border: 1.5px solid #111111;
+    border-radius: 1.25rem;
+    font-weight: inherit;
+}
+
+.to-do__title-task._error {
+    border: 2px solid rgb(197, 0, 0);
+}
+
+.to-do__title-task::placeholder {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.to-do__description-task {
+    resize: none;
+    min-height: 9.375rem;
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+    padding: 1rem 1.25rem;
+    border: 1.5px solid #111111;
+    border-radius: 1.25rem;
+    font-weight: inherit;
+}
+
+.to-do__description-task::placeholder {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.to-do__add-task {
+    white-space: nowrap;
+    max-width: 18.75rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 6.25rem;
+    border-radius: 1.125rem;
+    font-size: inherit;
+    color: inherit;
+    font-weight: 500;
+    line-height: 125%;
+    background: #F4A460;
+    transition: background 0.3s ease 0s;
+}
+
+.to-do__add-task:hover {
+    background: #E9967A;
+}
+
+/* spollers styles */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.task-spoller {
+    position: relative;
+}
+
+.task-spoller__button {
+    text-align: left;
+    width: 100%;
+    padding: 1rem 14.5rem 1rem 1.25rem;
+    color: inherit;
+    font-weight: 500;
+    font-size: inherit;
+    border-radius: 1.25rem;
+    background: #D3D3D3;
+    transition: background 0.5s ease 0s, border-radius 0.5s ease 0s;
+    position: relative;
+}
+
+.task-spoller__button._active {
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.task-spoller__button._completed {
+    padding: 1rem 9.2rem 1rem 1.25rem;
+}
+
+.task-spoller__icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    z-index: 5;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: transform 0.5s ease 0s;
+}
+
+.task-spoller__icon._active {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.task-spoller__icon._completed {
+    right: 20%;
+}
+
+.task-spoller__inner {
+    padding: 1rem 1.25rem;
+    border: 2px solid black;
+    border-radius: 0 0 1.25rem 1.25rem;
+    background: rgba(211, 211, 211, .1);
+}
+
+/* actions */
+.actions {
+    position: absolute;
+    top: 0.5rem;
+    right: 5%;
+    z-index: 5;
+    display: flex;
+    gap: 0.7rem;
+}
+
+.actions__button {
+
+    img {
+        pointer-events: none;
+    }
+}
+
+.actions__check-mark {}
+
+.actions__pin {}
+
+.actions__delete {}
+
+/* out tasks */
+.main__out {
+    padding: 1.25rem 0 1.25rem 0;
+}
+
+/* completed tasks */
+.main__completed-tasks {
+    padding: 1.25rem 0 2.5rem 0;
+}
+
+/* ======================================================== */
+/* media */
+@media (max-width: 30em) {
+    .to-do__add-task {
+        padding: 1rem 4.375rem;
+    }
+}

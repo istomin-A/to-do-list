@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="A.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <section class="main__main-part">
+                <div class="main__container _container">
+                    <h1 class="main__title">To Do List</h1>
+                    <div class="popup">
+                        <span>Task added</span>
+                        <span>
+                            <img class="popup__icon" src="img/check-mark.svg" alt="" width="30" height="30">
+                        </span>
+                    </div>
+                    <section class="to-do inner">
+                        <h2 class="to-do__title section-title">Add a new task</h2>
+                        <form class="to-do__body" id="to-do-form">
+                            <input class="to-do__title-task" type="text" name="input-title-task" id="input-title-task"
+                                maxlength="100" placeholder="Enter a task title">
+                            <div class="error out"></div>
+                            <textarea class="to-do__description-task" name="textarea-description-task"
+                                id="textarea-description-task" maxlength="500"
+                                placeholder="Enter a task description"></textarea>
+                            <button type="submit" class="to-do__add-task" id="button-add-task">Add task</button>
+                        </form>
+                    </section>
+                </div>
+            </section>
+            <section class="main__out">
+                <div class="main__container _container">
+                    <div class="to-do-out inner">
+                        <h2 class="to-do-out__title section-title">Tasks</h2>
+                        <div class="to-do-out__out-tasks out flex-column" id="out-task">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main__completed-tasks">
+                <div class="main__container _container">
+                    <div class="completed-tasks inner">
+                        <h2 class="completed-tasks__title section-title">Completed tasks</h2>
+                        <div class="completed-tasks__out out flex-column" id="completed-tasks">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
