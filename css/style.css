@@ -261,7 +261,7 @@ body {
 .task-spoller__button {
     text-align: left;
     width: 100%;
-    padding: 1rem 14.5rem 1rem 1.25rem;
+    padding: 1.5rem 14.5rem 1.5rem 1.25rem;
     color: inherit;
     font-weight: 500;
     font-size: inherit;
@@ -276,7 +276,7 @@ body {
 }
 
 .task-spoller__button._completed {
-    padding: 1rem 9.2rem 1rem 1.25rem;
+    padding: 1.5rem 9rem 1.5rem 1.25rem;
 }
 
 .task-spoller__icon {
@@ -308,7 +308,7 @@ body {
 /* actions */
 .actions {
     position: absolute;
-    top: 0.5rem;
+    top: 1rem;
     right: 5%;
     z-index: 5;
     display: flex;
@@ -322,12 +322,6 @@ body {
     }
 }
 
-.actions__check-mark {}
-
-.actions__pin {}
-
-.actions__delete {}
-
 /* out tasks */
 .main__out {
     padding: 1.25rem 0 1.25rem 0;
@@ -340,8 +334,40 @@ body {
 
 /* ======================================================== */
 /* media */
+
+/* 768 px */
+@media (max-width: 48em) {
+    .task-spoller__icon {
+        display: none;
+    }
+
+    .task-spoller__button {
+        padding: 1.5rem 11.5rem 1.5rem 1.25rem;
+    }
+
+    .task-spoller__button._completed {
+        padding: 1.5rem 7rem 1.5rem 1.25rem;
+    }
+}
+
+/* 480px */
 @media (max-width: 30em) {
     .to-do__add-task {
         padding: 1rem 4.375rem;
+    }
+
+    .task-spoller__button {
+        padding: 4.3rem 1rem 1.5rem 1rem;
+    }
+
+    .task-spoller__button._completed {
+        padding: 4.3rem 1rem 1.5rem 1rem;
+    }
+
+    .actions {
+        top: 0.7rem;
+        right: 50%;
+        transform: translateX(50%);
+        gap: 1rem;
     }
 }
